@@ -38,24 +38,6 @@ function handleKey(e)
   }
   return true;
 }
-var startTime = -1;
-var informed = false;
-var maxTime = 25 * 60; // 25 minut w sekundach
-
-function updateClock() {
-  var time = new Date();
-  // ... (reszta funkcji pozostaje bez zmian) ...
-
-  // Aktualizacja dla odliczania w dół
-  var remainingTime = Math.max(0, maxTime - (currTime - startTime));
-
-  // ... (reszta funkcji pozostaje bez zmian) ...
-}
-
-// Uruchomienie zegara przy załadowaniu strony
-document.addEventListener("DOMContentLoaded", function() {
-  updateClock();
-});
 
 
 function clickHandler(e) {
@@ -67,7 +49,7 @@ function clickHandler(e) {
   if (targ.tagName == "INPUT") return true;
   return false;
 }
-
+      var maxTime = 25 * 60; // 25 minut w sekundach
       var startTime = -1;
       var informed = false
       function updateClock()
@@ -84,12 +66,7 @@ function clickHandler(e) {
         var proc = (currTime - startTime) * 50 / 60 / maxTime
         proc = Math.min(proc, 50)
         remainingTime = Math.max(0, (maxTime) - (currTime - startTime))
-/*        var s = document.getElementById("suwak").firstChild
-        str = "["
-        for(i=1; i<=proc; i++) str = str + "O";
-        for(; i<=50; i++) str = str + "."
-        s.nodeValue = str + "]";
-*/
+
         var t = document.getElementById("zegarek").firstChild
         minutes=((minutes < 10) ? "0" : "") + minutes
         seconds=((seconds < 10) ? "0" : "") + seconds
@@ -99,13 +76,17 @@ function clickHandler(e) {
         t.nodeValue = rMin + ":" + rSec + " min"
         if (!informed && remainingTime <= 60)
         {
-          alert("Pozostała ci jeszcze 1 minuta do końca testu.")
+          //alert("Pozostała ci jeszcze 1 minuta do końca testu.")
           informed = true
-        }
+		}
 	if (remainingTime <= 0)
 	{
+		startTime = -1
 		t.nodeValue = "KONIEC!!!"
 	}
         if (remainingTime > 0) setTimeout("updateClock()", 1000);
       }
 
+document.addEventListener("DOMContentLoaded", function() {
+  updateClock();
+});
