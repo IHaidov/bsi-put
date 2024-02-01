@@ -29,7 +29,7 @@
     <li value="1">
     <p>Sieci VPN mozna zbudowac wykorzystujac: [1/1] </p>
     <ul class="a">
-      <li><input type="checkbox" id="question1-option1"> IDS</li>
+      <li><input type="checkbox" id="question1-option1" > IDS</li>
       <li><input type="checkbox" id="question1-option2" checked > Wireguard</li>
       <li><input type="checkbox" id="question1-option3" checked> TLS</li>
       <li><input type="checkbox" id="question1-option4"> SIEM</li>
@@ -4090,7 +4090,87 @@
       <li><input type="checkbox" id="question440-option4" checked> administrator (root)</li>
     </ul>
   </li>
-
+  <li value="17">
+    <p>Kto moze nadawac/modyfikowac uprawnienia POSIX ACL danego obiektu w systemie plikow: ﻿﻿</p>
+    <ul class="a">
+      <li><input type="checkbox" id="question440-option1"> wlasciciel obiektu, ale pod warunkiem, ze posiada prawo 'w'﻿﻿</li>
+      <li><input type="checkbox" id="question440-option2" checked> wlasciciel obiektu, niezaleznie od posiadania prawa 'w' </li>
+      <li><input type="checkbox" id="question440-option3"> dowolny uzytkownik posiadajacy prawo 'w'</li>
+      <li><input type="checkbox" id="question440-option4" checked> administrator (root)</li>
+    </ul>
+  </li>
+  <li value="18">
+    <p>TCP Wrapper moze korzystac z dwoch plików z regulami polityki, przy czym:</p>
+    <ul class="a">
+      <li><input type="checkbox" id="question441-option1" checked> poniewaz stosuje zasade pierwszego dopasowania, plik /etc/hosts. deny moze nie byc w ogóle sprawdzany</li>
+      <li><input type="checkbox" id="question441-option2" checked> jesli regula nie zostaje odnaleziona w zadnym pliku, to dostep zostaje odrzucony</li>
+      <li><input type="checkbox" id="question441-option3"> najpierw sprawdzane sa reguly z pliku /etc/hosts.deny, a ewentualnie pozniej reguly z pliku /etc/hosts.allow</li>
+      <li><input type="checkbox" id="question441-option4" checked> najpierw sprawdzane sa reguly z pliku /etc/hosts. allow, a ewentualnie pózniej reguly z pliku /etc/hosts.deny</li>
+    </ul>
+  </li>
+  <li value="19">
+    <p>Które z ponizzych polecen pozwola ustawié bit SGID dla katalogu dir: </p>
+    <ul class="a">
+      <li><input type="checkbox" id="question442-option1"> set-suid dir </li>
+      <li><input type="checkbox" id="question442-option2" checked> chmod g+s dir </li>
+      <li><input type="checkbox" id="question442-option3"> sgid --set dir </li>
+      <li><input type="checkbox" id="question442-option4"> setfacl -m group::s</li>
+    </ul>
+  </li>
+  <li value="20">
+    <p>$ getfacl skrypt user::rw- user: jbond:r-x group:: rwx group: agents: rwx mask::r-x other:: -w- Oznacza, ze: </p>
+    <ul class="a">
+      <li><input type="checkbox" id="question443-option1"> grupa agents moze zmodyfikowac skrypt</li>
+      <li><input type="checkbox" id="question443-option2" checked> grupa domyslna (owning group) moze zmodyfikowaé skrypt</li>
+      <li><input type="checkbox" id="question443-option3" checked> uzytkownik jbond moze wykonac skrypt</li>
+      <li><input type="checkbox" id="question443-option4" checked> pozostali uzytkownicy moga zmodyfikowas skrypt</li>
+    </ul>
+  </li>
+  <li value="21">
+    <p>Wskaz wszystkie warunki konieczne do weryfikacji podpisu cyfrowego wiadomosci S/MIME: </p>
+    <ul class="a">
+      <li><input type="checkbox" id="question444-option1"> uprzednie przekazanie do nadawcy klucza publicznego odbiorcy</li>
+      <li><input type="checkbox" id="question444-option2" checked> dostep odbiorcy do certyfikatu klucza publicznego CA, który certyfikowat klucz publiczny nadawcy</li>
+      <li><input type="checkbox" id="question444-option3" checked> uprzednie przekazanie do odbiorcy klucza publicznego nadawCy</li>
+      <li><input type="checkbox" id="question444-option4"> poprawna wymiana kluczy miedzy nadawca a odbiorca metoda Diffiego-Hellmana</li>
+    </ul>
+  </li>
+  <li value="22">
+    <p>Których wpisów ACE na liscie POSIX ACL dotyczy maska: </p>
+    <ul class="a">
+      <li><input type="checkbox" id="question445-option1"> wlasciciela obiektu</li>
+      <li><input type="checkbox" id="question445-option2"> grupy (domyslnej) pliku (z bazowych ACE)</li>
+      <li><input type="checkbox" id="question445-option3" checked> kazdej jawnie wpisanej grupy</li>
+      <li><input type="checkbox" id="question445-option4"> wszystkich uzytkowników niewpisanych jawnie, ale nalezacych do dowolnej jawnie wpisanej grupy</li>
+    </ul>
+  </li>
+  <li value="23">
+    <p>Jakie mechanizmy kryptograficzne sa niezbedne w celu zapewnienia niezaprzeczalnosci (ang. nonrepudiation) w kontekscie poczty elektronicznej?: </p>
+    <ul class="a">
+      <li><input type="checkbox" id="question446-option1"> wiadomosc musi byc podpisana elektronicznie kluczem publicznym nadawcy</li>
+      <li><input type="checkbox" id="question446-option2" checked> wiadomosc musi by podpisana elektronicznie kluczem prywatnym nadawcy</li>
+      <li><input type="checkbox" id="question446-option3" checked> do wiadomosci musi zostac dolaczony certyfikat poswiadczony przez zaufany urzad CA</li>
+      <li><input type="checkbox" id="question446-option4"> wiadomosc musi zostac zaszyfrowana kluczem symetrycznym znanym jedynie stronom komunikacji</li>
+    </ul>
+  </li>
+  <li value="24">
+    <p>Co uzytkownik moze zrobic za pomoca komendy ulimit?: </p>
+    <ul class="a">
+      <li><input type="checkbox" id="question447-option1"> zwiekszy swoje uprawnienia dostepu do plików</li>
+      <li><input type="checkbox" id="question447-option2" checked> zablokowac mozliwosc dokonywania zrzutu obrazu pamieci procesu do pliku (core dump)</li>
+      <li><input type="checkbox" id="question447-option3" checked> ograniczyc liczbe jednoczesnie otwartych plików</li>
+      <li><input type="checkbox" id="question447-option4"> ograniczyc uprawnienia dostepu do swoich plików dla innych uzytkowników</li>
+    </ul>
+  </li>
+  <li value="25">
+    <p>Uzytkownik U systemu Linux nalezacy do grupy G1 nie ma wpisu na liscie ACL do zasobu O w systemie plików. Jednak grupie G1 na liscie ACL zasobu O nadano prawa r i x, a uprawnienia domyslne tego zasobu wynosza rwx. Jakie efektywne uprawnienia do O posiada U? (U nie jest wlascicielem O i nie nalezy do grupy zasobu O, mask=rwx): </p>
+    <ul class="a">
+      <li><input type="checkbox" id="question448-option1"> tylko r</li>
+      <li><input type="checkbox" id="question448-option2" checked> rx </li>
+      <li><input type="checkbox" id="question448-option3"> rwx</li>
+      <li><input type="checkbox" id="question448-option4"> zadne</li>
+    </ul>
+  </li>
 </ol>
 
 
