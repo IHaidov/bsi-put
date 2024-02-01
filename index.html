@@ -3751,7 +3751,7 @@
   <li value="4">
     <p>Które stwierdzenia dotyczące blokady konta w systemie Windows są prawdziwe: </p>
     <ul class="a">
-      <li><input type="checkbox" id="question403-option1"> licznik prób logowania jest zerowany po każdej udanej próbie logowania</li>
+      <li><input type="checkbox" id="question403-option1" checked> licznik prób logowania jest zerowany po każdej udanej próbie logowania</li>
       <li><input type="checkbox" id="question403-option2" checked> w czasie określonym długością okresu zerowania licznika prób logowania, użytkownik nie może podjąć więcej udanych prób logowania niż określa próg blokady</li>
       <li><input type="checkbox" id="question403-option3" checked> istnieje ustawienie progu blokady dopuszczające nieblokowanie konta mimo dowolnej liczby niepomyślnych prób logowania</li>
       <li><input type="checkbox" id="question403-option4"> próg blokady określa ilość kolejnych niepomyślnych prób logowania, po osiągnięciu której dostęp do konta będzie zablokowany trwale (do odwołania przez administratora)</li>
@@ -3842,9 +3842,9 @@
     <p>Mechanizm sudo umożliwia: </p>
     <ul class="a">
       <li><input type="checkbox" id="question413-option1">  miękkie (soft) zmniejszenie limitów użytkownika</li>
-      <li><input type="checkbox" id="question413-option2">  [X] uruchamianie poleceń z uprawnieniami administratora po podaniu własnego (domyślnie) hasła</li>
+      <li><input type="checkbox" id="question413-option2" checked>  uruchamianie poleceń z uprawnieniami administratora po podaniu własnego (domyślnie) hasła</li>
       <li><input type="checkbox" id="question413-option3">  miękkie (soft) zwiększenie limitów użytkownika</li>
-      <li><input type="checkbox" id="question413-option4">  [X] uruchamianie wybranych aplikacji z uprawnieniami innych użytkowników</li>
+      <li><input type="checkbox" id="question413-option4" checked>  uruchamianie wybranych aplikacji z uprawnieniami innych użytkowników</li>
     </ul>
   </li>
   <li value="15">
@@ -3868,9 +3868,9 @@
   <li value="17">
     <p>Udział IPC$ jest to: </p>
     <ul class="a">
-      <li><input type="checkbox" id="question416-option1" checked>  udział domyślny służący do dostępu do dysku C w celu zdalnej administracji</li>
+      <li><input type="checkbox" id="question416-option1">  udział domyślny służący do dostępu do dysku C w celu zdalnej administracji</li>
       <li><input type="checkbox" id="question416-option2"> endpoint kryptograficznej komunikacji IPsec</li>
-      <li><input type="checkbox" id="question416-option3"> udział do zdalnych wywołań procedur RPC</li>
+      <li><input type="checkbox" id="question416-option3" checked> udział do zdalnych wywołań procedur RPC</li>
       <li><input type="checkbox" id="question416-option4"> udział domyślny kontrolera domeny służący do obsługi logowania w sieci</li>
     </ul>
   </li>
@@ -3913,8 +3913,8 @@
   <li value="22">
     <p>Wybierz prawdziwe stwierdzenie dotyczące poniższego polecenia ssh -L 9999:neptun:23 pluton:</p>
     <ul class="a">
-      <li><input type="checkbox" id="question421-option1"> dane kierowane na port 999 systemu neptun zostaną rzesłane w niezabezpieczonej formie na port 23 systemu pluton</li>
-      <li><input type="checkbox" id="question421-option2"> dane kierowane na port 9999 lokalnego systemu zostaną przesłane w niezabezpieczonej formie na port 23 systemu neptun</li>
+      <li><input type="checkbox" id="question421-option1"> dane kierowane na port 9999 systemu neptun zostaną rzesłane w niezabezpieczonej formie na port 23 systemu pluton</li>
+      <li><input type="checkbox" id="question421-option2" checked> dane kierowane na port 9999 lokalnego systemu zostaną przesłane w niezabezpieczonej formie na port 23 systemu neptun</li>
       <li><input type="checkbox" id="question421-option3" checked> dane kierowane na port 9999 lokalnego systemu zostaną przesłane w zaszyfrowanej formie na port 22 systemu pluton</li>
       <li><input type="checkbox" id="question421-option4"> w wyniku polecenia zestawiony zostanie tunel kryptograficzny między systemem neptun i systemem pluton</li>
     </ul>
